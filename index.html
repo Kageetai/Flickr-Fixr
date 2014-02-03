@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+ 	<title>Flickr Fixr</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="script.js"></script> 
+	<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div id="side">
+		<h1>Flickr Fixr</h1>
+		<h5>Your fix for your everday day Flickr needs!</h5>
+		<form action="javascript:void(document.getElementById('search').click());">
+			Search for Tags seperated per comma:<br/>
+			<input type='text' id='tag' value='berlin'/ onkeydown="if (event.keyCode == 13) document.getElementById('search').click()">
+			<input type='button' id='search' class="groovybutton"
+				onclick="getPhotos(document.getElementById('tag').value, true);"
+				onMouseOver="goDashed(this.form.name,this.name)"
+				onMouseOut="goDotted(this.form.name,this.name)"
+				value='Search' />
+		</form>
+		<h6>Features</h6>
+		<ul>
+			<li>Click on an image to view it bigger (= better)</li>
+			<li>Images bigger than the screen are automatically resized</li>
+			<li>The title of the images is displayed below</li>
+			<li>Click on the big image or elsewhere to close it</li>
+			<li>Scroll down to load more pictures</li>
+			<li>Input one or more tags to search for and press the button</li>
+		</ul>
+	</div>
+	<div id="photos">
+		<ul id="photosList">
+		</ul>
+		
+	</div>
+	<div id="hover">
+	
+	</div>
+</body>
+</html>
