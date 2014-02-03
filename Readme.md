@@ -1,0 +1,1 @@
+a little experiment to gather photos from flickr without any libaries or other third party tools, just for learning purposes
