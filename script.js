@@ -2,6 +2,12 @@ $(function () {
   var page = 0;
   var tag = "berlin";
 
+  search = function() {
+    tag = $('#tag').val().replace(/\s/g, "") || tag;
+    $("#photos").empty();
+    loadPhotos(tag, true);
+  };
+
   loadPhotos = function (tag, fresh) {
     if (fresh)
       page = 0;
