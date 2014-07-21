@@ -1,102 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #ffffff;
+}
+
 #side {
-	position:fixed;
-	float:left;
-	width:400px;
-	margin-left:20px;
+  position: fixed;
+  float: left;
+  width: 400px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#wrapper {
+  float: left;
+  width: auto;
+  margin-left: 440px;
 }
 
 #photos {
-	float:left;
-	width:800px;
-	margin-left:420px;
-	
+  padding: 0;
+  margin: 0;
 }
 
+#photos li {
+  display: inline;
+  margin-left: 5px;
+}
+
+#photos li:hover {
+  opacity: 0.5;
+}
+
+
 h1, h5, h6 {
-	font-family: 'Press Start 2P', cursive
+  font-family: 'Press Start 2P', cursive
 }
 
 ul {
-	list-style-type:square;
+  list-style-type: square;
 }
 
 form {
-	padding-top:30px;
+  padding-top: 30px;
 }
 
-input {
-	margin-top: 5px;
-	font-size:14px;
-	font-weight:bold;
-	/* width:75px; */
-	height:25px;
-	background-color:#FFFFFF;
-	border-style:dotted;
-	border-color:#000000;
-	border-width:1px;
-	padding-left:5px;
+input,
+button {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  /* width:75px; */
+  height: 29px;
+  background-color: #FFFFFF;
+  border-style: dotted;
+  border-color: #000000;
+  border-width: 1px;
+  padding-left: 5px;
 }
 
 #search {
-	margin-left:10px;
-	height:29px;
+  margin-left: 10px;
 }
 
 #tag {
-	line-height: 1.5em;
-	width:300px;
-}
-
-#photosList {
-	padding-left:0px;
-}
-
-#photosList li {
-	display: inline;
-	margin-left:5px;
-}
-
-li:hover {
-	opacity:0.5;
+  line-height: 1.5em;
+  width: 300px;
 }
 
 #hover {
-	display:none;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	vertical-align:middle;
-	background-color:rgba(0, 0, 0, 0.8);
-	background-image:url(http://www.teddillard.com/graphics/timergifs/spinner.gif);
-	background-repeat:no-repeat;
-	background-position:center /* 150px */;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url(http://www.teddillard.com/graphics/timergifs/spinner.gif);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #hover img {
-	display:block;
-    margin-left: auto;
-    margin-right: auto;
-	margin-top:75px;
-	border:5px solid white;
-	background-color:white;
-/* }
+  display: block;
+  max-width: 100%;
+  max-height: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border: 5px solid white;
+  background-color: white;
 
-.shadow { */
-	-moz-box-shadow: 5px 5px 9px #000;
-	-webkit-box-shadow: 5px 5px 9px #000;
-	box-shadow: 5px 5px 9px #000;
-	/* For IE 8 */
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=9, Direction=135, Color='#000000')";
-	/* For IE 5.5 - 7 */
-	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=9, Direction=135, Color='#000000');
+  -moz-box-shadow: 5px 5px 9px #000;
+  -webkit-box-shadow: 5px 5px 9px #000;
+  box-shadow: 5px 5px 9px #000;
+  /* For IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=9, Direction=135, Color='#000000')";
+  /* For IE 5.5 - 7 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=9, Direction=135, Color='#000000');
 }
 
 #caption {
-	text-align: center;
-	color: white;
-	font-size: 24px;
-	font-family: Arial, sans-serif;
-	font-weight: bold;
+  display: block;
+  margin-top: 1em;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#caption:hover {
+  text-decoration: underline;
 }
