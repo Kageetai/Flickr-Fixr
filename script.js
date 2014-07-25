@@ -27,14 +27,16 @@ $(function () {
         $("<li>").append(
             $("<a>").attr("href", pictureLarge(value)).append(
                 $("<img>").attr({
-                  "src": pictureThumb(value),
-                  "alt": value.title
+                  src: pictureThumb(value),
+                  alt: value.title,
+                  id: value.id,
+                  "data-owner": value.owner
                 }).click(function (event) {
                   var hover = $("#hover");
                   hover.find("> img")
                       .attr("src", event.target.parentElement.href);
                   hover.find("> #caption")
-                      .attr("href", flickrURL(event.target.parentElement.href))
+                      .attr("href", flickrURL({ id: event.target.id, owner: event.target.attributes["data-owner"].value }))
                       .html(event.target.alt);
                   hover.fadeIn();
                   event.preventDefault();
