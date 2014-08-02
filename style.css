@@ -81,7 +81,7 @@ button {
 }
 
 #hover {
-  display: none;
+  /*display: none;*/
   position: fixed;
   left: 0;
   top: 0;
@@ -92,6 +92,12 @@ button {
   background-image: url(http://www.teddillard.com/graphics/timergifs/spinner.gif);
   background-repeat: no-repeat;
   background-position: center;
+
+  transition:0.5s linear all;
+}
+
+#hover.ng-hide {
+  opacity:0;
 }
 
 #hover img {

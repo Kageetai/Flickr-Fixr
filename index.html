@@ -1,12 +1,12 @@
 <!doctype html>
-<html>
+<html ng-app="maFlickr">
 <head>
   <title>Flickr Fixr</title>
   <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css"/>
 </head>
 
-<body>
+<body ng-controller="FlickrCtrl">
 <div id="side">
   <h1>Flickr Fixr</h1>
   <h5>Your fix for your everday day Flickr needs!</h5>
@@ -27,17 +27,22 @@
 </div>
 <div id="wrapper">
   <ul id="photos">
+    <li ng-repeat="p in photos">
+      <a class="photo" ng-click="showHover(p)">
+        <img alt="{{p.title}}" data-owner="{{p.owner}}" ng-src="{{pictureThumb(p)}}"/>
+      </a>
+    </li>
   </ul>
   <div id="placeholder">&nbsp;</div>
 </div>
 
-<div id="hover">
-  <img src="" alt=""/>
-  <a href="" id="caption"></a>
+<div id="hover" ng-show="displayHover" ng-click="hideHover()">
+  <img alt="{{selPhoto.title}}" ng-src="{{pictureLarge(selPhoto)}}" />
+  <a id="caption" ng-href="{{flickrURL(selPhoto)}}">{{selPhoto.title}}</a>
 </div>
 
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="jquery.visible.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-animate.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
