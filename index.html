@@ -11,8 +11,8 @@
   <h1>Flickr Fixr</h1>
   <h5>Your fix for your everday day Flickr needs!</h5>
 
-  <form action="javascript:search()">
-    <input type='text' id='tag' placeholder="search for tags"/>
+  <form ng-submit="loadPhotos(true)">
+    <input type='text' id='tag' placeholder="search for tags" ng-model="tag"/>
     <button type="submit" id="search">Search</button>
   </form>
   <h6>Features</h6>
@@ -33,7 +33,7 @@
       </a>
     </li>
   </ul>
-  <div id="placeholder">&nbsp;</div>
+  <div id="placeholder" in-view="loadPhotos(false)">&nbsp;</div>
 </div>
 
 <div id="hover" ng-show="displayHover" ng-click="hideHover()">
@@ -43,6 +43,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-animate.js"></script>
+<script src="angular-inview.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
