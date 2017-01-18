@@ -1,5 +1,5 @@
 # FlickrFixr
 
-A little experiment to gather photos from flickr without any libaries or other third party tools, just for learning purposes.
+A little experiment back in first semester of university. First without any libraries and then updated with jQuery (see branch `jquery`).
 
-Recently updated with own Flickr-API-key and now using Angular. Old version was with jQuery.
+Recently updated with own Flickr-API-key and now using Angular.
