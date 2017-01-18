@@ -9,9 +9,10 @@ angular.module('maFlickr', ['ngAnimate', 'angular-inview'])
 
       $scope.loadPhotos = function (fresh) {
         console.log("loading photos, page: " + $scope.page);
-        if (fresh)
+        if (fresh) {
           $scope.page = 0;
-        else
+          $scope.photos = [];
+        } else
           $scope.page++;
 
         $http({method: "GET", url: $scope.flickrAPI, cache: true, params: {
